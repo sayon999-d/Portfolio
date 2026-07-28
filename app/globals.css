@@ -501,6 +501,7 @@ main {
   position: relative;
   z-index: 3;
   padding: 18px 24px 120px;
+  overflow-x: clip;
 }
 
 .page-surface {
@@ -1036,12 +1037,16 @@ h3 {
 }
 
 @media (max-width: 800px) {
+  .page-shell {
+    overflow-x: clip;
+  }
+
   .site-header {
-    padding-inline: 14px;
+    padding: 12px 12px 0;
   }
 
   .site-main {
-    padding-inline: 14px;
+    padding: 10px 12px 80px;
   }
 
   .panel {
@@ -1056,6 +1061,63 @@ h3 {
     padding-inline: 24px;
   }
 
+  .landing-hero {
+    gap: 18px;
+    padding: 20px 0 12px;
+  }
+
+  .home-intro {
+    width: 100%;
+    max-width: 100%;
+    justify-items: start;
+    text-align: left;
+    gap: 14px;
+  }
+
+  .vaporize-stage {
+    min-height: 150px;
+    margin-bottom: -2px;
+    overflow: hidden;
+  }
+
+  .vaporize-stage > div {
+    transform: scale(0.48);
+    transform-origin: top center;
+  }
+
+  .home-intro h1 {
+    max-width: 12ch;
+    font-size: clamp(2.2rem, 11vw, 3.25rem);
+    line-height: 0.95;
+  }
+
+  .home-intro .lead {
+    max-width: 100%;
+    font-size: 0.98rem;
+    line-height: 1.65;
+  }
+
+  .section-card-grid {
+    width: 100%;
+    gap: 12px;
+    grid-template-columns: 1fr;
+  }
+
+  .section-card {
+    min-height: 184px;
+    padding: 18px;
+  }
+
+  .section-card h2 {
+    max-width: none;
+    font-size: clamp(1.55rem, 8vw, 2.2rem);
+  }
+
+  .section-card p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
   .section {
     padding: 42px 0;
     scroll-margin-top: 96px;
@@ -1063,6 +1125,8 @@ h3 {
 
   .nav {
     flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .nav-toggle {
@@ -1071,20 +1135,28 @@ h3 {
 
   .nav-links {
     width: 100%;
-    display: none;
+    display: flex;
     padding-top: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   .nav.is-open .nav-links {
     display: flex;
   }
 
-  .nav-pill {
-    display: none;
-  }
-
   .nav-links--route {
     gap: 8px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    padding: 8px 10px;
+    font-size: 0.92rem;
+  }
+
+  .brand {
+    font-size: 0.9rem;
   }
 
   h1 {
