@@ -3,19 +3,14 @@ import SiteFrame from '../../components/SiteFrame';
 
 const experiences = [
   {
-    period: '2022 - Present',
-    role: 'Principal AI Engineer, Northstar Systems',
-    detail: 'Leading inference architecture, evaluation systems, and platform reliability across enterprise AI products.',
-  },
-  {
-    period: '2018 - 2022',
-    role: 'Staff Engineer, Atlas Compute',
-    detail: 'Built distributed software services and ML infrastructure with a focus on performance and operational simplicity.',
-  },
-  {
-    period: '2014 - 2018',
-    role: 'Research Engineer, Cloudwave Lab',
-    detail: 'Delivered applied machine learning research and translated prototypes into reliable production systems.',
+    period: 'June 2026 - July 2026',
+    role: 'Data Analyst Intern | Bluestock Fintech',
+    detail: 'Remote',
+    accomplishments: [
+      'Analyzed mutual fund and financial datasets to identify key market trends and support data-driven analytics initiatives.',
+      'Built and maintained reporting dashboards using SQL and Excel, improving the accuracy and accessibility of core performance metrics.',
+      'Collaborated with cross-functional teams to convert raw financial data into clear summaries for stakeholders.',
+    ],
   },
 ];
 
@@ -25,13 +20,18 @@ export default function ExperiencePage() {
       <section className="route-section">
         <article className="crystal panel route-panel">
           <p className="section-label">Experience</p>
-          <h1>Work history, separated into its own chapter.</h1>
+          <h1>Professional experience, separated into its own chapter.</h1>
           <div className="timeline-list">
             {experiences.map((entry) => (
               <div key={entry.period} className="timeline-entry timeline-entry--route">
                 <span>{entry.period}</span>
                 <h3>{entry.role}</h3>
                 <p>{entry.detail}</p>
+                <ul className="detail-list">
+                  {entry.accomplishments.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>

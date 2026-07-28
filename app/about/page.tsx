@@ -7,20 +7,25 @@ export default function AboutPage() {
       <section className="route-section">
         <article className="flat-panel route-panel about-panel">
           <p className="section-label">About</p>
-          <h1>Minimal interfaces, robust systems, and human-centered machine intelligence.</h1>
+          <h1>AI &amp; ML Engineer | Backend Systems | LLM Orchestration | RAG Pipelines</h1>
           <p className="lead">
-            My work sits at the intersection of research and product engineering: designing model behavior, building runtime systems,
-            and shaping user experiences where trust and clarity matter.
+            I am a Bachelor of Technology student in Artificial Intelligence and Machine Learning (2024-2028) at Jain (Deemed-to-be
+            University) in Bengaluru. I specialize in building local RAG pipelines, omni-agent orchestration systems, and
+            high-performance backend infrastructure with Python and FastAPI.
           </p>
           <div className="route-text-grid">
             <p>
-              I focus on systems that stay calm under pressure. That means clear structure, resilient runtime behavior, and surfaces that
-              guide people without friction.
+              My work sits at the intersection of applied AI and production engineering: designing model behavior, orchestrating agent
+              systems, and building reliable backend layers that stay understandable under pressure.
             </p>
             <p>
-              The visual language here is intentionally wider and cleaner than the old layout. There are no side-corner lines, no stacked
-              chrome, and no competing frames around the content.
+              I care about products that feel calm, practical, and durable. That means clear structure, resilient runtime behavior, and
+              interfaces that help people move quickly without losing trust.
             </p>
+          </div>
+          <div className="flat-panel sub-panel">
+            <h3>Location</h3>
+            <p>Bengaluru, Karnataka</p>
           </div>
           <Link className="button button-primary route-back" href="/">
             Back to Home

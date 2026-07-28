@@ -293,13 +293,14 @@ export default function KineticGrid(props: KineticGridProps) {
 
       if (showCursorGlow && m.active) {
         const glow = ctx.createRadialGradient(m.x, m.y, 0, m.x, m.y, R * 0.7);
-        glow.addColorStop(0, 'rgba(255,255,255,0.16)');
-        glow.addColorStop(0.25, 'rgba(105,187,224,0.18)');
+        glow.addColorStop(0, 'rgba(255,255,255,0.42)');
+        glow.addColorStop(0.2, 'rgba(105,187,224,0.34)');
+        glow.addColorStop(0.45, 'rgba(105,187,224,0.22)');
         glow.addColorStop(1, 'rgba(105,187,224,0)');
         ctx.globalAlpha = 1;
         ctx.fillStyle = glow;
         ctx.beginPath();
-        ctx.arc(m.x, m.y, R * 0.7, 0, Math.PI * 2);
+        ctx.arc(m.x, m.y, R * 0.9, 0, Math.PI * 2);
         ctx.fill();
       }
 
